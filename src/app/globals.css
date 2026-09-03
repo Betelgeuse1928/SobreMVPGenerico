@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+
+/* ---- Marca "Sobre" (landing) ---- */
+@theme inline {
+  --color-paper: #efe6d3;
+  --color-paper-light: #f8f3e6;
+  --color-paper-dark: #e2d5b8;
+  --color-ink: #202b21;
+  --color-ink-muted: #5c6459;
+  --color-seal: #a23b2e;
+  --color-seal-light: #c96650;
+  --color-thread: #b08a4e;
+
+  --font-display: var(--font-display), serif;
+  --font-body: var(--font-body), sans-serif;
+}
+
+:root {
+  --background: #efe6d3;
+  --foreground: #202b21;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: #c96650;
+  color: #f8f3e6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Foco visible consistente para accesibilidad de teclado */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-seal);
+  outline-offset: 3px;
+}
+
+/* ---- Motor de invitaciones (theming por evento vía CSS vars, ver src/data/events.ts) ---- */
+.invitation {
+  --inv-paper: #ffffff;
+  --inv-paper-dark: #ffffff;
+  --inv-ink: #202020;
+  --inv-ink-muted: #666666;
+  --inv-accent: #a23b2e;
+  --inv-accent-light: #c96650;
+  --inv-accent-dark: #7a2b21;
+  background-color: var(--inv-paper);
+  color: var(--inv-ink);
+}
