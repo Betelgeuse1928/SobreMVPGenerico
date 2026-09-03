@@ -116,8 +116,11 @@ export const events: EventConfig[] = [
     cardPreview: { line1: 'Cumple 5', line2: 'Mateo', line3: '04 · 10 · 26' },
   },
   {
-    // Invitación real, publicada como muestra de portfolio con autorización de la familia.
+    // Invitación real (proyecto aparte, ya publicado). Se muestra en la grilla de
+    // ejemplos como tarjeta que enlaza al sitio real — NO se renderiza con el motor
+    // genérico. Por eso `externalUrl` y por eso queda fuera de /invitacion/[slug].
     slug: 'xv-luz',
+    externalUrl: 'https://xv-luz.vercel.app/',
     typeLabel: 'XV Años',
     eyebrow: 'Mis quince',
     title: 'Luz',

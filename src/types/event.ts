@@ -18,6 +18,11 @@ export interface EventLocation {
 
 export interface EventConfig {
   slug: string;
+  /**
+   * Si está presente, esta invitación NO usa el motor genérico: la tarjeta de la
+   * grilla de ejemplos enlaza a este sitio externo y no se genera /invitacion/[slug].
+   */
+  externalUrl?: string;
   typeLabel: string;
   eyebrow: string;
   title: string;

@@ -38,6 +38,7 @@ export const InvitationCard = ({
         </span>
         <span className="font-body text-[10px] tracking-wide" style={{ color: event.theme.inkMuted }}>
           {event.typeLabel}
+          {event.externalUrl && <span aria-hidden> ↗</span>}
         </span>
       </div>
 
@@ -57,10 +58,26 @@ export const InvitationCard = ({
   );
 
   if (interactive) {
+    const hoverWrap = 'block transition-transform duration-300 hover:-translate-y-1';
+
+    if (event.externalUrl) {
+      return (
+        <a
+          href={event.externalUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={hoverWrap}
+          aria-label={`Ver invitación real: ${event.title} (se abre en una pestaña nueva)`}
+        >
+          {card}
+        </a>
+      );
+    }
+
     return (
       <Link
         href={`/invitacion/${event.slug}`}
-        className="block transition-transform duration-300 hover:-translate-y-1"
+        className={hoverWrap}
         aria-label={`Ver invitación de ejemplo: ${event.title}`}
       >
         {card}

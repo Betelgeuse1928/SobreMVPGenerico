@@ -11,7 +11,7 @@ import { InvExtras } from '@/components/invitation/Extras';
 import { InvFooter } from '@/components/invitation/Footer';
 
 export function generateStaticParams() {
-  return events.map((event) => ({ slug: event.slug }));
+  return events.filter((event) => !event.externalUrl).map((event) => ({ slug: event.slug }));
 }
 
 export default async function InvitationPage({
@@ -22,7 +22,8 @@ export default async function InvitationPage({
   const { slug } = await params;
   const event = getEventBySlug(slug);
 
-  if (!event) notFound();
+  // Las invitaciones con externalUrl viven en su propio sitio, no en el motor genérico.
+  if (!event || event.externalUrl) notFound();
 
   const themeStyle = {
     '--inv-paper': event.theme.paper,
