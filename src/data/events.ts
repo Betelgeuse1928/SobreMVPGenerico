@@ -115,6 +115,46 @@ export const events: EventConfig[] = [
     giftsMessage: 'Con tu compañía nos hacés muy felices. Si querés traer algo, le encantan los dinosaurios.',
     cardPreview: { line1: 'Cumple 5', line2: 'Mateo', line3: '04 · 10 · 26' },
   },
+  {
+    // Invitación real, publicada como muestra de portfolio con autorización de la familia.
+    slug: 'xv-luz',
+    typeLabel: 'XV Años',
+    eyebrow: 'Mis quince',
+    title: 'Luz',
+    monogram: 'L',
+    dateISO: '2026-08-15T20:30:00',
+    dateLabel: 'Sábado 15 de agosto de 2026',
+    tagline: 'Te invito a celebrar junto a mí esta noche inolvidable.',
+    theme: {
+      paper: '#faf9f6',
+      paperDark: '#ebe6da',
+      ink: '#2d2d2a',
+      inkMuted: '#6e6e6b',
+      accent: '#c5a880',
+      accentLight: '#dfd3c3',
+      accentDark: '#a78b60',
+    },
+    locations: [
+      {
+        label: 'Ceremonia y fiesta',
+        name: 'Complejo de los Bomberos Voluntarios de Montecarlo',
+        address: 'Montecarlo, Misiones',
+        time: '20:30 hs',
+        mapQuery: 'Complejo de los Bomberos Voluntarios de Montecarlo, Misiones',
+      },
+    ],
+    dressCode: {
+      title: 'Elegante',
+      description:
+        'Te pedimos asistir con vestimenta formal para compartir esta noche tan especial.',
+    },
+    gallery: [{ caption: 'Sesión de fotos' }, { caption: 'Con mi familia' }, { caption: 'Creciendo' }],
+    rsvpDeadline: '20 de julio',
+    giftsMessage:
+      'Tu presencia es el regalo más importante. Si querés hacerme un regalo, en la invitación se comparten los datos para transferir.',
+    musicNote: 'Armé una playlist en Spotify para la previa y la fiesta — sumá tu tema favorito.',
+    cardPreview: { line1: 'Mis quince', line2: 'Luz', line3: '15 · 08 · 26' },
+  },
 ];
 
 export const getEventBySlug = (slug: string) => events.find((e) => e.slug === slug);

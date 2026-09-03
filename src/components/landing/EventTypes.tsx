@@ -10,7 +10,7 @@ export const EventTypes = () => {
           Cada festejo, con su propia identidad
         </h2>
         <p className="mt-4 max-w-md font-body text-sm leading-relaxed text-ink-muted">
-          Estas son invitaciones de ejemplo, con nombres inventados — así se ve el resultado.
+          Algunas son trabajos reales y otras casos de muestra — así se ve el resultado.
           Tocá una para abrirla como la abriría un invitado.
         </p>
 
