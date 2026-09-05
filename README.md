@@ -45,10 +45,14 @@ Cada evento define su propia paleta de colores vía `theme`, que se inyecta como
 
 ## Notas importantes antes de publicar
 
-- **La boda (Daiana & Facundo) y la de Luz son proyectos reales, ya publicados** — su tarjeta usa
-  `externalUrl` y enlaza afuera, no se renderizan con el motor genérico. **Sofía y Mateo son
-  ficticios**, pensados solo para mostrar el estilo. No reemplaces estos últimos por datos reales
-  de un cliente sin su permiso explícito.
+- **La boda (Daiana & Facundo) es un proyecto real**, pero se recrea con el motor genérico en vez
+  de enlazar a su sitio real — así el RSVP y la galería quedan simulados (como en toda invitación
+  de este engine) y nadie que entre desde acá puede escribir en la base de datos real de sus
+  invitados. Por el mismo motivo se omiten el alias/CVU reales de regalos.
+- **La de Luz sí usa `externalUrl`** y enlaza a su sitio real — ese proyecto tiene su propio motor
+  (con música, RSVP y muro de fotos propios) y no vale la pena reproducirlo acá.
+- **Sofía y Mateo son ficticios**, pensados solo para mostrar el estilo. No reemplaces estos
+  últimos por datos reales de un cliente sin su permiso explícito.
 - La **galería usa bloques con inicial + leyenda**, no fotos reales, para no depender de fotos de
   terceros en el sitio de marketing. Para una invitación real de un cliente, se reemplaza por sus
   fotos (`next/image` + carpeta `public/images/...`).

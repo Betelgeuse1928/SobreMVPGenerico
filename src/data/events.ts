@@ -2,25 +2,58 @@ import { EventConfig } from '@/types/event';
 
 export const events: EventConfig[] = [
   {
+    // Boda real de Daiana & Facundo. A diferencia de xv-luz, NO enlaza al sitio real
+    // (que tiene su propio backend con RSVP y muro de fotos): se recrea acá con el
+    // motor genérico, con los mismos datos pero el RSVP/galería simulados de Sobre,
+    // para que nadie que entre desde la landing pueda escribir en la base real.
     slug: 'boda-df',
     typeLabel: 'Boda',
-    eyebrow: 'Nos casamos',
+    eyebrow: 'Nuestra boda',
     title: 'Daiana & Facundo',
     monogram: 'D&F',
     dateISO: '2026-10-31T17:30:00',
     dateLabel: 'Sábado 31 de octubre de 2026',
-    tagline: 'Un proyecto real, ya publicado y en uso.',
+    tagline: 'Dios tenía un plan perfecto para nuestras vidas y nos unió en su mismo camino.',
     theme: {
-      paper: '#f7f1e6',
-      paperDark: '#e9dcc4',
-      ink: '#3f3226',
-      inkMuted: '#8a7a64',
-      accent: '#b8695a',
-      accentLight: '#dba394',
-      accentDark: '#8f4b3e',
+      paper: '#efd4b7',
+      paperDark: '#d9b38e',
+      ink: '#2c1716',
+      inkMuted: '#76534d',
+      accent: '#a95848',
+      accentLight: '#ef9b73',
+      accentDark: '#74322d',
     },
-    // Sitio real, deployado por el cliente — la tarjeta lleva directo ahí, no a /invitacion/boda-df
-    externalUrl: 'https://boda-dyf.vercel.app',
+    locations: [
+      {
+        label: 'Ceremonia religiosa',
+        name: 'Iglesia — General Paz 139',
+        address: 'Montecarlo, Misiones',
+        time: '17:30 hs',
+        mapQuery: 'Iglesia General Paz 139 Montecarlo Misiones',
+      },
+      {
+        label: 'Fiesta y recepción',
+        name: 'Complejo Paranay',
+        address: 'RN12 Km 1503, El Alcázar, Misiones',
+        time: '20:00 hs',
+        mapQuery: 'Complejo Paranay RN12 Km 1503 El Alcazar Misiones',
+      },
+    ],
+    dressCode: {
+      title: 'Colores alegres, sin blanco',
+      description:
+        'Inspiración primaveral, frescura y estilo — onda formal. El blanco, esta vez, queda fuera del dress code.',
+    },
+    gallery: [
+      { caption: 'Mykonos' },
+      { caption: 'París' },
+      { caption: 'Barcelona' },
+      { caption: 'Coliseo' },
+    ],
+    rsvpDeadline: '30 de septiembre',
+    giftsMessage:
+      'Tu presencia es el regalo más importante. Si querés hacernos un regalo, en la invitación real se comparten los datos para transferir.',
+    musicNote: 'Armamos una playlist en Spotify para la fiesta — sumá tu tema favorito.',
     cardPreview: { line1: 'Nos casamos', line2: 'Daiana & Facundo', line3: '31 · 10 · 26' },
   },
   {
