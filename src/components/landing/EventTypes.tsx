@@ -10,8 +10,9 @@ export const EventTypes = () => {
           Cada festejo, con su propia identidad
         </h2>
         <p className="mt-4 max-w-md font-body text-sm leading-relaxed text-ink-muted">
-          Algunas son trabajos reales y otras casos de muestra — así se ve el resultado.
-          Tocá una para abrirla como la abriría un invitado.
+          La boda y la de Luz son proyectos reales, ya publicados — se abren en su propio sitio.
+          Sofía y Mateo son ejemplos ficticios, pensados para mostrar el estilo. Tocá cualquiera
+          para verla como la vería un invitado.
         </p>
 
         <div className="mt-12 flex flex-wrap justify-center gap-8 sm:justify-start">

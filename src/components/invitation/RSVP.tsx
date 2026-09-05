@@ -14,7 +14,9 @@ export const InvRSVP = ({ event }: { event: EventConfig }) => {
   return (
     <InvSection title="Confirmar asistencia">
       <p className="font-body text-sm" style={{ color: 'var(--inv-ink-muted)' }}>
-        Esperamos tu confirmación hasta el {event.rsvpDeadline}.
+        {event.rsvpDeadline
+          ? `Esperamos tu confirmación hasta el ${event.rsvpDeadline}.`
+          : 'Contanos si vas a poder acompañarnos.'}
       </p>
 
       {sent ? (

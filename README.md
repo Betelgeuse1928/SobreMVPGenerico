@@ -45,8 +45,10 @@ Cada evento define su propia paleta de colores vía `theme`, que se inyecta como
 
 ## Notas importantes antes de publicar
 
-- **Los 3 eventos de `events.ts` son ficticios** (Valentina & Tomás, Sofía, Mateo), pensados solo
-  para mostrar el servicio. No uses datos reales de clientes en esta demo pública sin su permiso.
+- **La boda (Daiana & Facundo) y la de Luz son proyectos reales, ya publicados** — su tarjeta usa
+  `externalUrl` y enlaza afuera, no se renderizan con el motor genérico. **Sofía y Mateo son
+  ficticios**, pensados solo para mostrar el estilo. No reemplaces estos últimos por datos reales
+  de un cliente sin su permiso explícito.
 - La **galería usa bloques con inicial + leyenda**, no fotos reales, para no depender de fotos de
   terceros en el sitio de marketing. Para una invitación real de un cliente, se reemplaza por sus
   fotos (`next/image` + carpeta `public/images/...`).

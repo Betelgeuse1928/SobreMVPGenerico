@@ -15,7 +15,7 @@ export const CTA = () => {
               href="https://wa.me/5493751479433?text=Hola%20estoy%20interesado%2Fa%20en%20una%20invitacion%20para%20mi%20evento"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-seal px-6 py-3 font-body text-sm text-paper-light transition-colors hover:bg-seal-light"
+              className="inline-flex items-center justify-center rounded-full bg-brass px-6 py-3 font-body text-sm text-paper-light transition-colors hover:bg-brass-light"
             >
               Escribinos por WhatsApp
             </a>

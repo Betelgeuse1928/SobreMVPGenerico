@@ -2,14 +2,14 @@ import { EventConfig } from '@/types/event';
 
 export const events: EventConfig[] = [
   {
-    slug: 'boda-demo',
+    slug: 'boda-df',
     typeLabel: 'Boda',
     eyebrow: 'Nos casamos',
-    title: 'Valentina & Tomás',
-    monogram: 'V&T',
-    dateISO: '2027-03-13T18:00:00',
-    dateLabel: 'Sábado 13 de marzo de 2027',
-    tagline: 'Después de ocho años juntos, llegó el momento de decir que sí.',
+    title: 'Daiana & Facundo',
+    monogram: 'D&F',
+    dateISO: '2026-10-31T17:30:00',
+    dateLabel: 'Sábado 31 de octubre de 2026',
+    tagline: 'Un proyecto real, ya publicado y en uso.',
     theme: {
       paper: '#f7f1e6',
       paperDark: '#e9dcc4',
@@ -19,32 +19,9 @@ export const events: EventConfig[] = [
       accentLight: '#dba394',
       accentDark: '#8f4b3e',
     },
-    locations: [
-      {
-        label: 'Ceremonia',
-        name: 'Capilla Nuestra Señora del Valle',
-        address: 'Villa General Belgrano, Córdoba',
-        time: '18:00 hs',
-        mapQuery: 'Villa General Belgrano Cordoba',
-      },
-      {
-        label: 'Fiesta',
-        name: 'Estancia Los Alamos',
-        address: 'Ruta Provincial 5, Km 12',
-        time: '21:00 hs',
-        mapQuery: 'Villa General Belgrano Cordoba',
-      },
-    ],
-    dressCode: {
-      title: 'Elegante campestre',
-      description:
-        'Colores tierra y tonos suaves. Vestimenta formal, pero pensada para pasto y aire libre.',
-    },
-    gallery: [{ caption: 'La propuesta' }, { caption: 'Viaje a Salta' }, { caption: 'En casa' }],
-    rsvpDeadline: '15 de enero',
-    giftsMessage: 'Tu presencia es el regalo más lindo. Si querés sumar algo más, dejamos alias.',
-    musicNote: 'Sumá una canción a la playlist y ayudanos a armar la noche.',
-    cardPreview: { line1: 'Nos casamos', line2: 'Valentina & Tomás', line3: '13 · 03 · 27' },
+    // Sitio real, deployado por el cliente — la tarjeta lleva directo ahí, no a /invitacion/boda-df
+    externalUrl: 'https://boda-dyf.vercel.app',
+    cardPreview: { line1: 'Nos casamos', line2: 'Daiana & Facundo', line3: '31 · 10 · 26' },
   },
   {
     slug: 'xv-demo',

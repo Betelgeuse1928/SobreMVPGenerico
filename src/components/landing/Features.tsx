@@ -28,7 +28,7 @@ export const Features = () => {
             <li key={item} className="flex items-center gap-4 py-4">
               <span
                 aria-hidden
-                className="h-1.5 w-1.5 shrink-0 rounded-full bg-seal"
+                className="h-1.5 w-1.5 shrink-0 rounded-full bg-brass"
               />
               <span className="font-body text-base text-ink">{item}</span>
             </li>

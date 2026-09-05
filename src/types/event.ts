@@ -18,11 +18,6 @@ export interface EventLocation {
 
 export interface EventConfig {
   slug: string;
-  /**
-   * Si está presente, esta invitación NO usa el motor genérico: la tarjeta de la
-   * grilla de ejemplos enlaza a este sitio externo y no se genera /invitacion/[slug].
-   */
-  externalUrl?: string;
   typeLabel: string;
   eyebrow: string;
   title: string;
@@ -31,15 +26,17 @@ export interface EventConfig {
   dateLabel: string;
   tagline: string;
   theme: EventTheme;
-  locations: EventLocation[];
-  dressCode?: { title: string; description: string };
-  gallery: { caption: string }[];
-  rsvpDeadline: string;
-  giftsMessage?: string;
-  musicNote?: string;
   cardPreview: {
     line1: string;
     line2: string;
     line3: string;
   };
+  /** Si está presente, la tarjeta enlaza a un sitio real ya publicado en vez de a /invitacion/[slug]. */
+  externalUrl?: string;
+  locations?: EventLocation[];
+  dressCode?: { title: string; description: string };
+  gallery?: { caption: string }[];
+  rsvpDeadline?: string;
+  giftsMessage?: string;
+  musicNote?: string;
 }

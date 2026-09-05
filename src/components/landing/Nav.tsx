@@ -29,7 +29,7 @@ export const Nav = () => {
 
         <a
           href="#contacto"
-          className="rounded-full bg-ink px-5 py-2 font-body text-sm text-paper-light transition-colors hover:bg-seal"
+          className="rounded-full bg-ink px-5 py-2 font-body text-sm text-paper-light transition-colors hover:bg-brass"
         >
           Contanos tu evento
         </a>

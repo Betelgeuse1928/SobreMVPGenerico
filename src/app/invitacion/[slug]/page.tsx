@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { events, getEventBySlug } from '@/data/events';
 import { InvHero } from '@/components/invitation/Hero';
 import { InvCountdown } from '@/components/invitation/Countdown';
@@ -22,8 +22,9 @@ export default async function InvitationPage({
   const { slug } = await params;
   const event = getEventBySlug(slug);
 
-  // Las invitaciones con externalUrl viven en su propio sitio, no en el motor genérico.
-  if (!event || event.externalUrl) notFound();
+  if (!event) notFound();
+  // Los eventos con externalUrl (ej. sitios ya publicados por un cliente) no tienen página propia acá.
+  if (event.externalUrl) redirect(event.externalUrl);
 
   const themeStyle = {
     '--inv-paper': event.theme.paper,

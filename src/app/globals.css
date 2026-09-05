@@ -1,23 +1,28 @@
 @import 'tailwindcss';
 
-/* ---- Marca "Sobre" (landing) ---- */
+/* ---- Marca "Sobre" ----
+   Concepto: el sobre de papel manila, la estampilla y el matasellos.
+   Un único acento "postmark" (bermellón apagado) reservado para el sello —
+   el resto de la interfaz vive en tinta y papel. */
 @theme inline {
-  --color-paper: #efe6d3;
-  --color-paper-light: #f8f3e6;
-  --color-paper-dark: #e2d5b8;
-  --color-ink: #202b21;
-  --color-ink-muted: #5c6459;
-  --color-seal: #a23b2e;
-  --color-seal-light: #c96650;
-  --color-thread: #b08a4e;
+  --color-paper: #e7dec2;
+  --color-paper-light: #f2ead4;
+  --color-paper-dark: #d6c89e;
+  --color-ink: #1c2b3a;
+  --color-ink-muted: #5c6b78;
+  --color-brass: #a9812f;
+  --color-brass-light: #cda65c;
+  --color-brass-dark: #7c5e20;
+  --color-postmark: #8a352c;
 
   --font-display: var(--font-display), serif;
   --font-body: var(--font-body), sans-serif;
+  --font-mono: var(--font-mono), monospace;
 }
 
 :root {
-  --background: #efe6d3;
-  --foreground: #202b21;
+  --background: #e7dec2;
+  --foreground: #1c2b3a;
 }
 
 body {
@@ -28,8 +33,8 @@ body {
 }
 
 ::selection {
-  background-color: #c96650;
-  color: #f8f3e6;
+  background-color: #cda65c;
+  color: #1c2b3a;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -46,7 +51,7 @@ body {
 /* Foco visible consistente para accesibilidad de teclado */
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--color-seal);
+  outline: 2px solid var(--color-brass-dark);
   outline-offset: 3px;
 }
 

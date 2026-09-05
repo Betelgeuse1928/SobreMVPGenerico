@@ -28,7 +28,7 @@ export const Process = () => {
         <ol className="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2">
           {steps.map((step, i) => (
             <li key={step.title} className="flex gap-5">
-              <span className="font-display text-2xl text-seal">{i + 1}</span>
+              <span className="font-display text-2xl text-brass-dark">{i + 1}</span>
               <div>
                 <h3 className="font-display text-lg">{step.title}</h3>
                 <p className="mt-1.5 font-body text-sm leading-relaxed text-ink-muted">
